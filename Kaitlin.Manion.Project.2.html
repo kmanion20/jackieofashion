@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="container straighten">
+    <div id="popup">
+        <div class="marker" id="arrival"></div>
+        <div class="marker" id="reelection"></div>
+        <div class="marker" id="Kennedy"></div>
+        <div class="marker" id="suit"></div>
+        <div class="marker" id="hat"></div>
+        <div class="marker" id="museum"></div>
+        <img src="http://i.dailymail.co.uk/i/pix/2013/11/19/article-2510064-1983B6E000000578-858_634x888.jpg" />
+    </div>
+</div>
+
+<div class="textbox">
+    <div class="popuptitle">The History of Jackie O.'s Pink Suit</div>
+    Jackie Onassis Kennedy was First Lady to President John Fitzgerald Kennedy. She was regularly photographed due to her fame, but also because of her impeccable sense of style. On the day of her husband's assassination in 1963, she wore a pink tweed suit that forever will be associated with the tragedy.  <br /> <br />Click on the markers to find out more about her suit and the day she wore it on.
+</div>
+
+
+<style>
+.container{
+    width: 60%;
+    display: inline-block;
+    position: relative;
+}
+.textbox {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    font-family: 'Georgia', sans-serif;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+.container img {    
+    width: 100%;
+}
+.marker{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    border: 1px solid black;
+    border-radius: 50%;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+.marker:hover {
+    background-color: grey;
+}
+#reelection {
+    top:25%;
+    left: 50%;
+}
+#Kennedy{
+    top:38%;
+    left: 20%;
+}
+#suit {
+    top: 49%;
+    right: 36%;
+
+}
+#hat {
+    top:10%;
+    left: 50%;
+}
+#arrival{
+    top:10%;
+    left: 11%;
+}
+#museum {
+    top: 87%;
+    right: 35%;
+}
+.straighten:after{
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden
+}
+
+#popup {
+    position:relative;
+}
+.hoverbox {
+    position:absolute; 
+    padding:0.5em; 
+    background:#FFF; 
+    box-shadow:1px 1px 8px rgba(0,0,0,.4); 
+    z-index:300; 
+    font-family:'Roboto', Arial, sans-serif; 
+    line-height:1.3em; 
+    min-width:100px; 
+    max-width:200px;
+}
+.popuptitle {
+    color: #C72428;
+    font-family:'Roboto', Arial, sans-serif;
+    letter-spacing: 0.01em;
+    font-size:18px; 
+    font-weight:700;
+    clear:both;
+}
+@media screen and (max-width: 900px) {
+.container{
+    width: 90%
+}
+.textbox{
+    width: 90%
+}
+}
+</style>
+
+<script>
+$(document).ready(function() {
+
+var data = 
+[{"id":"arrival","name":"Arrival to Texas", "description":"<br>In 1963, President Kennedy and his wife, Jackie, traveled to Dallas, Texas on Air Force One to campaign for President Kennedy's reelection.</br> <br> The President and First Lady were headed to The Dallas Trade Mart for a luncheon with Vice President Lyndon Johnson and the Texas governor at the time. A carefully planned 10 mile route was chosen from the Dallas Love Field airport to The Dallas Trade Mart so that Kennedy could have time to be seen by all of the onlookers that were patiently awaiting his arrival. </br> "},
+{"id":"Reelection","name":"President Kennedy's Reelection Campaign", "description":"<br> President Kennedy was a favorite not only amongst his own Democratic party, but in America. His youth helped him relate to younger voters and his optimistic attitude about America was passed on throughout his time as President and made him an almost absolute reelection success. </br> <br> Following his assassination, Kennedy's spot in the 1964 quadrennial presidential elections was filled by Vice-President Lyndon B. Johnson who had gained almost as much favoritism as Kennedy during his term as vice-president. He is most noted for his somber acceptance of the presidency upon Kennedy's passing. </br>"},
+{"id":"Kennedy","name":"<br>President John F. Kennedy and the Kennedy Curse", "description":"President John F. Kennedy was the youngest elected president at age 43 when he was elected in 1960. </br> <br> Before his time in the Oval Office, Kennedy served in the House of Representatives for Massachusetts from 1947-1953, then in the U.S. Senate from 1953-1960. </br> <br> As the 35th President of the United States, Kennedy's presidency was mainly marked by his insistence on pulling troops out of Vietnam,  his support for the Civil Rights Movement and one of his biggest challenges, the Cuban Missle Crisis. </br> <br> President Kennedy's death is sometimes attributed to 'the Kennedy Curse', which refers to the many tragedies the Kennedy family experienced starting with Rosemary Kennedy's impairing lobotomy in 1941. </br> "}, 
+{"id":"hat","name":"Jackie's Pillbox Hat", "description":"<br>Jackie O. was regularly pictured in preppy 1960s era clothing, most notably large sunglasses, elbow-length gloves, shift dresses and most notably, pillbox hats. Despite their previous popularity, Jackie had a touch for making old things new again and was regularly photographed in pillbox hats. </br> <br> On the day of her husband's death, she wore a pink pillbox hat that matched her tweet skirt suit exactly. </br> <br> While the hat is famous due to it being a part of the pink tweed suit, it's location is a mystery. After the assassination, Jackie was photographed without it and it did not arrive at the National Archives in Maryland with the rest of the blood-spattered suit. </br> "},
+{"id":"suit","name":"The Pink Tweed Suit", "description":"<br>John F. Kennedy referred to Jackie O. as looking 'smashing' in the pink tweed suit she wore on the fate day November 22, 1963 even though the suit had been worn by her many times to other events. </br> <br> Many thought the suit was a Coco Chanel original, but President Kennedy had an American-made version produced for his First Lady. He was a strong proponent of supporting the American economy and he always made sure Jackie got the American knockoffs of European goods. Sometimes these were even better quality than the European originals. </br> <br> One of the images from November 22, 1963 was Jackie wearing the blood stained suit even after she had the opportunity to change. </br> <br> Author Philip Shenon remarked that Jackie stated, 'No, I'm going to leave these clothes on. I want them to see what they have done,' when asked if she wanted to change. </br>"},
+{"id":"museum","name":"Will the suit make a museum appearance?", "description":"<br> Anyone looking to see the pink tweed suit worn by Jackie on this fateful day will have to wait until 2103 as per the Kennedy family's request. </br> <br> The suit and the shoes Jackie wore were sent by her daughter to the National Archives in the same bag that her maid had placed them in the day after the assassination. The suit has not been cleaned and fits in the closed acid-free container with rotating air temperature to preserve the fabric. "}
+];
+
+
+$(".marker").click(function(){
+    $('.textbox').empty();
+    for (var i=0; i<data.length; i++) {
+    if (this.id == data[i].id) {
+        $(".textbox").append('<div class="popuptitle">'+data[i].name+'</div>' + data[i].description);
+    } 
+    } 
+});
+
+
+var pos, thex, they;
+
+$(".marker").mouseover(function(e){
+    $(".hoverbox").remove();
+
+    // POSITIONING THE POP UP
+    if (navigator.userAgent.indexOf("Firefox")!=-1){
+        
+        pos = $("#popup").offset()
+        thex = e.pageX - pos.left + 10;
+        they = e.pageY - pos.top + 0;
+        if (thex > $("#popup").width() - 150) { thex = $("#popup").width() - 150 };
+        if (they > $("#popup").height() - 100) { they = $("#popup").height() - 100 };
+    } else {
+
+        pos = $("#popup").offset()
+        thex = event.pageX - pos.left + 10;
+        they = event.pageY - pos.top + 0;
+        if (thex > $("#popup").width() - 150) { thex = $("#popup").width() - 150 };
+        if (they > $("#popup").height() - 100) { they = $("#popup").height() - 100 };
+    }
+
+    // APPENDING TEXT TO THE POP UP
+    for (var i=0; i<data.length; i++) {
+    if (this.id == data[i].id) {
+    $("#popup").append('<div class="hoverbox" style="top:'+they+'px; left:'+thex+'px;"><div class="popuptitle">'+data[i].name+'</div></div>');
+    } 
+    
+
+    }   
+});
+
+$(".marker").mouseleave(function(){
+    $(".hoverbox").remove();
+});
+
+
+});//doc ready
+</script>
+
+</body>
+</html>
+
+
+
